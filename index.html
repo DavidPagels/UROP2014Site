@@ -36,35 +36,36 @@
         <p>Graph Algorithm Visualization Program is a learning/research utility comprised mainly of two components, the visual representation of the user-created graph and a language (called GraphLang) created to interact with that visual representation.</p>
 
 
-        <h2>GraphLang</h2></br>
+        <h2>GraphLang</h2>
 
         <p>GraphLang is a language created to interact with the visual representation of the graph constructed by the user. GraphLang is case and space sensitive language with all keywords being lowercase. Most, if not all statements begin with a keyword such as set, declare, add, etc.</p>
         </br>
 
-        <h3>Setting Variables</h3>
+        <h3>Setting Variables</h3></br>
 
-        <code>set &lt;vartype&gt; &lt;varname&gt; [&lt;attribute&gt;] &lt;to|=&gt; &lt;expression&gt;</code></br>
+        <code>set &lt;vartype&gt; &lt;varname&gt; [&lt;attribute&gt;] &lt;to|=&gt; &lt;expression&gt;</code></br></br>
+
         <p>vartype:   int, string, vertex, edge</p>
         <p>varname:   user defined variable names</p>
         <p>attribute: needed for vertices and edges to specify what attribute to change.</p>
         <p>to and =:  may be used interchangeably</p>
-        <p>expression:the expression is evaluated and assigned to the variable</p>
+        <p>expression:the expression is evaluated and assigned to the variable</p></br></br>
 
 
-        <h3>Declaring Variables</h3>
+        <h3>Declaring Variables</h3></br>
 
-        <code>declare &lt;vartype&gt; &lt;varname&gt;</code></br>
+        <code>declare &lt;vartype&gt; &lt;varname&gt;</code></br></br>
 
         <p>vartype:	int, string</p>
-        <p>varname:	user defined variable names</p>
+        <p>varname:	user defined variable names</p></br></br>
 
 
         <h3>If Statements</h3>
-        <p>Be certain to have a space between all tokens.</p>
+        <p>Be certain to have a space between all tokens.</p></br>
 
         <pre><code>if &lt;conditional&gt;
     &lt;statement&gt;
-end if</code></pre>
+end if</code></pre></br>
 
         <pre><code>if &lt;conditional&gt;
     &lt;statement&gt;
@@ -78,12 +79,12 @@ end if</code></pre></br>
 
         <pre><code>while &lt;conditional&gt;
     &lt;statement&gt;
-end while</code></pre>
+end while</code></pre></br>
 
 
         <h3>Functions</h3></br>
 
-        <code>function &lt;functionName&gt; ( &lt;vartype&gt; &lt;varname&gt; , ... )</code>
+        <code>function &lt;functionName&gt; ( &lt;vartype&gt; &lt;varname&gt; , ... )</code></br></br>
 
         <p>functionName:		user defined function name</p>
         <p>vartype	:		int, string, vertex</p>
@@ -93,7 +94,7 @@ end while</code></pre>
         <h3>Calling Functions</h3>
         <p>Functions may be called recursively!</p></br>
 
-        <code>call &lt;functionName&gt; ( &lt;varname&gt; , …)</code></br>
+        <code>call &lt;functionName&gt; ( &lt;varname&gt; , …)</code></br></br>
 
         <p>functionName:		user defined function name</p>
         <p>varname:		user defined variable name</p></br></br>
@@ -101,7 +102,7 @@ end while</code></pre>
 
         <h3>For Loops</h3></br>
 
-        <code>for each &lt;vartype&gt; &lt;varname&gt; adjacent to | in &lt;varname (if “adjacent to”) or  listname ( if “in”)&gt;</code>
+        <code>for each &lt;vartype&gt; &lt;varname&gt; adjacent to | in &lt;varname (if “adjacent to”) or  listname ( if “in”)&gt;</code></br>
 
         <p>vartype:	vertex</p>
         <p>varname:	user defined variable name</p>
@@ -137,31 +138,31 @@ end while</code></pre>
         <h3>Vertex Attributes</h3></br>
 
         <h4>Predecessor:</h4>
-        <p>Holds the unique string ID of another node.</p>
-        <p>Type: String</p>
-        <p>Default Value: “”</p>
+        <p style="text-indent:5em;">Holds the unique string ID of another node.</p>
+        <p style="text-indent:5em;">Type: String</p>
+        <p style="text-indent:5em;">Default Value: “”</p>
         <h4>Color:</h4>
-        <p>Color can be set to distinguish a vertex</p>
-        <p>Type: Color</p>
-        <p>Default Value: null</p>
+        <p style="text-indent:5em;">Color can be set to distinguish a vertex</p>
+        <p style="text-indent:5em;">Type: Color</p>
+        <p style="text-indent:5em;">Default Value: null</p>
         <h4>Distance:</h4>
-        <p>Distance unrelated to adjacent edge weights</p>
-        <p>Type: double</p>
-        <p>Default Value: 0.0</p></br></br>
+        <p style="text-indent:5em;">Distance unrelated to adjacent edge weights</p>
+        <p style="text-indent:5em;">Type: double</p>
+        <p style="text-indent:5em;">Default Value: 0.0</p></br></br>
 
 
         <h3>Edge Attributes</h3></br>
 
         <h4>toVertex:</h4>
-        <p>Holds the unique string ID of the vertex at which the edge terminates</p>
-        <p>Type: String</p>
+        <p style="text-indent:5em;">Holds the unique string ID of the vertex at which the edge terminates</p>
+        <p style="text-indent:5em;">Type: String</p>
         <h4>edgeWeight:</h4>
-        <p>Holds the user-assigned edge weight.</p>
-        <p>Type: Double</p>
+        <p style="text-indent:5em;">Holds the user-assigned edge weight.</p>
+        <p style="text-indent:5em;">Type: Double</p>
         <h4>Color:</h4>
-        <p>Color can be set to distinguish an edge</p>
-        <p>Type: Color</p>
-        <p>Default Value: null</p>
+        <p style="text-indent:5em;">Color can be set to distinguish an edge</p>
+        <p style="text-indent:5em;">Type: Color</p>
+        <p style="text-indent:5em;">Default Value: null</p>
 
     </section>
 </div>
