@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Graph Algorithm Visualization Program : Created by David Pagels for UROP 2014">
@@ -9,69 +9,173 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>UROP2014site</title>
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/DavidPagels/UROP2014Site">View on GitHub</a>
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
+        <a id="forkme_banner" href="https://github.com/DavidPagels/UROP2014Site">View on GitHub</a>
 
-          <h1 id="project_title">Graph Algorithm Visualization Program</h1>
-          <h2 id="project_tagline">Created by David Pagels for UROP 2014</h2>
+        <h1 id="project_title">Graph Algorithm Visualization Program</h1>
+        <h2 id="project_tagline">Created by David Pagels for UROP 2014</h2>
 
-            <section id="downloads">
-              <a class="jar_download_link" href="https://github.com/DavidPagels/UROP2014Site/blob/gh-pages/UROPJar.jar?raw=true">Download the runnable .jar of this project</a>
-            </section>
-        </header>
-    </div>
+        <section id="downloads">
+            <a class="jar_download_link" href="https://github.com/DavidPagels/UROP2014Site/blob/gh-pages/UROPJar.jar?raw=true">Download the runnable .jar of this project</a>
+        </section>
+    </header>
+</div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
         <h2>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>About</h2>
+            <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>About</h2>
 
-<p>Graph Algorithm Visualization Program is a learning/research utility comprised mainly of two components, the visual representation of the user-created graph and a language (called GraphLang) created to interact with that visual representation.</p>
+        <p>Graph Algorithm Visualization Program is a learning/research utility comprised mainly of two components, the visual representation of the user-created graph and a language (called GraphLang) created to interact with that visual representation.</p>
 
 
-<h2>
-<a class="anchor"><span class="octicon octicon-link"></span></a>GraphLang</h2>
+        <h2>
+            <a class="anchor"><span class="octicon octicon-link"></span></a>GraphLang</h2>
 
-<p>GraphLang is a language created to interact with the visual representation of the graph constructed by the user. GraphLang is case and space sensitive language with all keywords being lowercase. Most, if not all statements begin with a keyword such as set, declare, add, etc.</p>
+        <p>GraphLang is a language created to interact with the visual representation of the graph constructed by the user. GraphLang is case and space sensitive language with all keywords being lowercase. Most, if not all statements begin with a keyword such as set, declare, add, etc.</p>
+        </br>
+        <h3>
+            <a class="anchor"><span class="octicon octicon-link"></span></a>Setting Variables</h3>
 
-<h3>
-<a class="anchor"><span class="octicon octicon-link"></span></a>Setting Variables</h3>
+        <p>set &lt;vartype&gt; &lt;varname&gt; [&lt;attribute&gt;] &lt;to|=&gt; &lt;expression&gt;</p></br>
+        <p>vartype:   int, string, vertex, edge</p>
+        <p>varname:   user defined variable names</p>
+        <p>attribute: needed for vertices and edges to specify what attribute to change.</p>
+        <p>to and =:  may be used interchangeably</p>
+        <p>expression:the expression is evaluated and assigned to the variable</p>
 
-          <p>set &lt;vartype&gt; &lt;varname&gt; [&lt;attribute&gt;] &lt;to|=&gt; &lt;expression&gt;</p></br>
-          <p>vartype:   int, string, vertex, edge</p>
-          <p>varname:   user defined variable names</p>
-          <p>attribute: needed for vertices and edges to specify what attribute to change.</p>
-          <p>to and =:  may be used interchangeably</p>
-          <p>expression:the expression is evaluated and assigned to the variable</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+        <h3>Declaring Variables</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+        <p>declare &lt;vartype&gt; &lt;varname&gt;</p></br>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+        <p>vartype:	int, string</p>
+        <p>varname:	user defined variable names</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
+        <h3>If Statements</h3>
+        <p>Be certain to have a space between all tokens.</p>
+
+        <p>if &lt;conditional&gt;</p>
+        <p>&lt;statement&gt;</p>
+        <p>end if</p>
+
+        <p>if &lt;conditional&gt;</p>
+        <p>&lt;statement&gt;</p>
+        <p>else</p>
+        <p>&lt;statement&gt;</p>
+        <p>end if</p></br>
+
+        <p>See below for more about conditional statements.</p></br>
+
+        <h3>While Statements</h3></br>
+
+        <p>while &lt;conditional&gt;</p>
+        <p>&lt;statement&gt;</p>
+        <p>end while</p>
+
+
+        <h3>Functions</h3></br>
+
+        <code>function &lt;functionName&gt; ( &lt;vartype&gt; &lt;varname&gt; , ... )</code>
+
+        <p>functionName:		user defined function name</p>
+        <p>vartype	:		int, string, vertex</p>
+        <p>varname:		user defined variable name</p></br></br>
+
+
+        <h3>Calling Functions</h3>
+        <p>Functions may be called recursively!</p></br>
+
+        <code>call &lt;functionName&gt; ( &lt;varname&gt; , …)</code></br>
+
+        <p>functionName:		user defined function name</p>
+        <p>varname:		user defined variable name</p></br></br>
+
+
+        <h3>For Loops</h3></br>
+
+        <code>for each &lt;vartype&gt; &lt;varname&gt; adjacent to | in &lt;varname (if “adjacent to”) or  listname ( if “in”)&gt;</code>
+
+        <p>vartype:	vertex</p>
+        <p>varname:	user defined variable name</p>
+        <p>listname:	user defined list variable name</p></br></br>
+
+
+        <h3>Conditional</h3>
+        <p>Conditional statements are parsed by javascript. Currently expressions do not change the value of the variables within the conditional statement.</p></br>
+
+        <h4>Special conditional statements</h4>
+
+        <code>&lt;vertexID&gt; isIn (&lt;vertexList&gt; | Graph.vertices)</code>
+        <p>- Returns true if the vertex was found ( In the list | In the graph vertices)</p></br>
+
+        <code>&lt;vertexID&gt; dist</code>
+        <p>- Returns the distance value in the vertex (Double)</p></br>
+
+        <code>&lt;vertexID1&gt; to &lt;vertexID2&gt; weight</code>
+        <p>- Returns the edge weight stored in edge vertexID1 to vertexID2</p></br>
+
+        <code>&lt;vertexList&gt; isEmpty</code>
+        <p>- Returns true if the vertex list is empty</p></br></br>
+
+
+        <h3>Special Functions</h3></br>
+
+        <p>clearGraph: resets attributes of all vertices and edges to default values;</p></br></br></br>
+
+
+
+        <h2>Graph Component Information</h2></br>
+
+        <h3>Vertex Attributes</h3></br>
+
+        <h4>Predecessor:</h4>
+        <p>Holds the unique string ID of another node.</p>
+        <p>Type: String</p>
+        <p>Default Value: “”</p>
+        <h4>Color:</h4>
+        <p>Color can be set to distinguish a vertex</p>
+        <p>Type: Color</p>
+        <p>Default Value: null</p>
+        <h4>Distance:</h4>
+        <p>Distance unrelated to adjacent edge weights</p>
+        <p>Type: double</p>
+        <p>Default Value: 0.0</p></br></br>
+
+
+        <h3>Edge Attributes</h3></br>
+
+        <h4>toVertex:</h4>
+        <p>Holds the unique string ID of the vertex at which the edge terminates</p>
+        <p>Type: String</p>
+        <h4>edgeWeight:</h4>
+        <p>Holds the user-assigned edge weight.</p>
+        <p>Type: Double</p>
+        <h4>Color:</h4>
+        <p>Color can be set to distinguish an edge</p>
+        <p>Type: Color</p>
+        <p>Default Value: null</p>
+
+    </section>
+</div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+    <footer class="inner">
         <p class="copyright">UROP2014site maintained by <a href="https://github.com/DavidPagels">DavidPagels</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+    </footer>
+</div>
 
-    
 
-  </body>
+
+</body>
 </html>
