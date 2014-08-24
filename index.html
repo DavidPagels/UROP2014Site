@@ -116,12 +116,12 @@ end while</code></pre></br>
         <h3>Return Statements:</h3>
         <p>Returning values not yet supported</p></br>
 
-        <p>return</p></br></br>
+        <code>return</code></br></br>
 
 
         <h3>For Loops</h3></br>
 
-        <code>for each &lt;vartype&gt; &lt;varname&gt; adjacent to | in &lt;varname (if “adjacent to”) or  listname ( if “in”)&gt;</code></br>
+        <code>for each &lt;vartype&gt; &lt;varname&gt; adjacent to | in &lt;varname (if “adjacent to”) or  listname ( if “in”)&gt;</code></br></br>
 
         <p>vartype:	vertex</p>
         <p>varname:	user defined variable name</p>
@@ -131,7 +131,7 @@ end while</code></pre></br>
         <h3>Conditional</h3>
         <p>Conditional statements are parsed by javascript. Currently expressions do not change the value of the variables within the conditional statement.</p></br>
 
-        <h4>Special conditional statements</h4>
+        <h5>Special conditional statements</h5>
 
         <code>&lt;vertexID&gt; isIn (&lt;vertexList&gt; | Graph.vertices)</code>
         <p>- Returns true if the vertex was found ( In the list | In the graph vertices)</p></br>
@@ -149,15 +149,18 @@ end while</code></pre></br>
         <h3>Expressions:</h3>
         <p>Mathematical expressions using user defined variables, integers, etc.</p></br>
 
-        <p>Special Expressions:</p>
-        <li>dequeue &lt;vertexListName&gt;</li>
-        <li>&lt;listName&gt; extract (min | max) (dist | time)</li></br></br>
+        <h5>Special Expressions:</h5>
+        <code>dequeue &lt;vertexListName&gt;</code>
+        <p>- Returns the first element in the list.</p></br>
+
+        <code>&lt;listName&gt; extract (min | max) (dist | time)</code>
+        <p>- Returns the vertex with the min/max time/dist in the list</p></br></br>
 
 
         <h3>Mark:</h3>
         <p>Use this function to mark a certain vertex (such as the starting vertex in the algorithm).</p></br>
 
-        <p>mark vertex &lt;varName&gt;</p></br>
+        <code>mark vertex &lt;varName&gt;</code></br></br>
 
         <p>varName: Name of the vertex.</p></br></br>
 
@@ -191,11 +194,11 @@ end while</code></pre></br>
         <h4>distance:</h4>
         <p style="text-indent:5em;">Distance unrelated to adjacent edge weights</p>
         <p style="text-indent:5em;">Type: double</p>
-        <p style="text-indent:5em;">Default Value: 0.0</p></br></br>
+        <p style="text-indent:5em;">Default Value: 0.0</p>
         <h4>time:</h4>
         <p style="text-indent:5em;">A second variable attribute for use in algorithms.</p>
         <p style="text-indent:5em;">Type: double</p>
-        <p style="text-indent:5em;">Default Value: 0.0</p>
+        <p style="text-indent:5em;">Default Value: 0.0</p></br></br>
 
 
         <h3>Edge Attributes</h3></br>
