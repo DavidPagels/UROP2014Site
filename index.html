@@ -33,7 +33,9 @@
 
         <h2>About</h2>
 
-        <p>Graph Algorithm Visualization Program is a learning/research utility comprised mainly of two components, the visual representation of the user-created graph and a language (called GraphLang) created to interact with that visual representation.</p>
+        <p>This program allows computer scientists learning graph theory to be able to watch how the complex algorithms unfold while also providing experienced computer scientists a tool to help develop novel graph algorithms. It does this by initially aiding the user on the use of the new language with a choice of fundamental graph theory algorithm examples. The program allows users to construct their own unique graphs in an intuitive way. These graphs may exhibit any combination of basic graph attributes. During the construction of a new graph, the user is prompted to uniquely identify each vertex. The user is also prompted on weighted graphs to enter in edge weights. At any point during the use of the program on the main screen, the user may zoom in or out and move vertices around using the arrow tool, which allows the user to situate the vertices in a way that is useful.</p>
+        <p>The other facet to this program is the new language (GraphLang) created to interact with the user-created graphs. This new language has several fundamental components such as if statements, while statements, for loops, functions, variables, and variable operations. Once the user creates their graph and writes their algorithm, the user can then choose how they wish to step through the algorithm. Independent of the user’s choice, their algorithm is checked for errors before attempting to run it. The options for executing through the algorithm are ‘Step’ping through the algorithm, ‘Run’ning the algorithm which automatically takes steps at a controllable interval, and an ‘Instant’ option which executes the steps as fast as the program can parse the algorithm. Also, while the user is stepping through or running their algorithm, helpful prompts are displayed below the graph they created. Some of this useful information displayed includes stating the relevant vertex, showing the value of an expression (mathematical or conditional), and telling the user a value being assigned to a certain vertices’ attribute.</p>
+        <p>There are several other notable features incorporated in this program. The user can resize the graph, move vertices, and select vertex and edge attributes they wish to view at any time (including during execution of their algorithm). The user also has the option to save and open graphs. The save feature saves whether or not the graph is weighted or directed, the position of every vertex, that vertex’s attribute values, the adjacent edges and their attributes, and the algorithm entered in the algorithm panel.</p>
 
 
         <h2>GraphLang</h2>
@@ -47,17 +49,28 @@
 
         <p>vartype:   int, string, vertex, edge</p>
         <p>varname:   user defined variable names</p>
-        <p>attribute: needed for vertices and edges to specify what attribute to change.</p>
+        <p>attribute: needed for vertices and edges to specify what attribute to change. (see below)</p>
         <p>to and =:  may be used interchangeably</p>
-        <p>expression:the expression is evaluated and assigned to the variable</p></br></br>
+        <p>expression:the expression is evaluated and assigned to the variable. (see below)</p></br></br>
 
 
-        <h3>Declaring Variables</h3></br>
+        <h3>Declaring Variables</h3>
+        <p>Variables can also be implicitly declared by setting an undeclared variable.</p></br>
 
         <code>declare &lt;vartype&gt; &lt;varname&gt;</code></br></br>
 
         <p>vartype:	int, string</p>
         <p>varname:	user defined variable names</p></br></br>
+
+
+        <h3>Adding Variables to Lists:</h3></br>
+
+        <code>add &lt;vartype&gt; to &lt;listname&gt; = &lt;var | varList&gt;</code></br></br>
+
+        <p>vartype: variable type (int, string, vertex)</p>
+        <p>listname: name of the list to add to</p>
+        <p>var: integer, string, vertex, Graph.vertices (all of the vertices in the graph)</p>
+        <p>varList: &lt;var&gt;, &lt;var&gt; , &lt;var&gt; , ...</p></br></br>
 
 
         <h3>If Statements</h3>
@@ -82,6 +95,15 @@ end if</code></pre></br>
 end while</code></pre></br>
 
 
+        <h3>Calling Functions</h3>
+        <p>Functions may be called recursively!</p></br>
+
+        <code>call &lt;functionName&gt; ( &lt;varname&gt; , …)</code></br></br>
+
+        <p>functionName:		user defined function name</p>
+        <p>varname:		user defined variable name</p></br></br>
+
+
         <h3>Functions</h3></br>
 
         <code>function &lt;functionName&gt; ( &lt;vartype&gt; &lt;varname&gt; , ... )</code></br></br>
@@ -91,13 +113,10 @@ end while</code></pre></br>
         <p>varname:		user defined variable name</p></br></br>
 
 
-        <h3>Calling Functions</h3>
-        <p>Functions may be called recursively!</p></br>
+        <h3>Return Statements:</h3>
+        <p>Returning values not yet supported</p></br>
 
-        <code>call &lt;functionName&gt; ( &lt;varname&gt; , …)</code></br></br>
-
-        <p>functionName:		user defined function name</p>
-        <p>varname:		user defined variable name</p></br></br>
+        <p>return</p></br></br>
 
 
         <h3>For Loops</h3></br>
@@ -127,6 +146,22 @@ end while</code></pre></br>
         <p>- Returns true if the vertex list is empty</p></br></br>
 
 
+        <h3>Expressions:</h3>
+        <p>Mathematical expressions using user defined variables, integers, etc.</p></br>
+
+        <p>Special Expressions:</p>
+        <li>dequeue &lt;vertexListName&gt;</li>
+        <li>&lt;listName&gt; extract (min | max) (dist | time)</li></br></br>
+
+
+        <h3>Mark:</h3>
+        <p>Use this function to mark a certain vertex (such as the starting vertex in the algorithm).</p></br>
+
+        <p>mark vertex &lt;varName&gt;</p></br>
+
+        <p>varName: Name of the vertex.</p></br></br>
+
+
         <h3>Special Functions</h3></br>
 
         <p>clearGraph: resets attributes of all vertices and edges to default values;</p></br></br></br>
@@ -137,18 +172,30 @@ end while</code></pre></br>
 
         <h3>Vertex Attributes</h3></br>
 
-        <h4>Predecessor:</h4>
+        <h4>ID:</h4>
+        <p style="text-indent:5em;">Holds the unique string ID of itself.</p>
+        <p style="text-indent:5em;">Type: String</p>
+        <p style="text-indent:5em;">Default Value: Set by user.</p>
+        <h4>predecessor:</h4>
         <p style="text-indent:5em;">Holds the unique string ID of another node.</p>
         <p style="text-indent:5em;">Type: String</p>
         <p style="text-indent:5em;">Default Value: “”</p>
-        <h4>Color:</h4>
+        <h4>color/hue/saturation:</h4>
         <p style="text-indent:5em;">Color can be set to distinguish a vertex</p>
         <p style="text-indent:5em;">Type: Color</p>
         <p style="text-indent:5em;">Default Value: null</p>
-        <h4>Distance:</h4>
+        <h4>visited:</h4>
+        <p style="text-indent:5em;">Marks a vertex as visited with a cyan ring</p>
+        <p style="text-indent:5em;">Type: boolean</p>
+        <p style="text-indent:5em;">Default Value: false</p>
+        <h4>distance:</h4>
         <p style="text-indent:5em;">Distance unrelated to adjacent edge weights</p>
         <p style="text-indent:5em;">Type: double</p>
         <p style="text-indent:5em;">Default Value: 0.0</p></br></br>
+        <h4>time:</h4>
+        <p style="text-indent:5em;">A second variable attribute for use in algorithms.</p>
+        <p style="text-indent:5em;">Type: double</p>
+        <p style="text-indent:5em;">Default Value: 0.0</p>
 
 
         <h3>Edge Attributes</h3></br>
@@ -159,10 +206,27 @@ end while</code></pre></br>
         <h4>edgeWeight:</h4>
         <p style="text-indent:5em;">Holds the user-assigned edge weight.</p>
         <p style="text-indent:5em;">Type: Double</p>
-        <h4>Color:</h4>
+        <h4>color/hue/saturation:</h4>
         <p style="text-indent:5em;">Color can be set to distinguish an edge</p>
         <p style="text-indent:5em;">Type: Color</p>
-        <p style="text-indent:5em;">Default Value: null</p>
+        <p style="text-indent:5em;">Default Value: null</p></br></br>
+
+
+        <h3>Note about Colors:</h3></br>
+        <p>Hue values can be set between 0 and 359, Saturation can be set between 0 and 99. Colors (not hue or saturation) are limited to the Java defaults:</p>
+        <li>black</li>
+        <li>blue</li>
+        <li>cyan</li>
+        <li>darkGray</li>
+        <li>gray</li>
+        <li>green</li>
+        <li>lightGray</li>
+        <li>magenta</li>
+        <li>orange</li>
+        <li>pink</li>
+        <li>red</li>
+        <li>white</li>
+        <li>yellow</li>
 
     </section>
 </div>
